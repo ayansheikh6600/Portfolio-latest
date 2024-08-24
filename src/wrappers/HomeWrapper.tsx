@@ -10,7 +10,7 @@ const HomeWrapper = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-      // Simulate site loading time
+      
       document.body.style.overflow = 'hidden';
       const timer = setTimeout(() => {
         setLoading(false);
@@ -23,8 +23,7 @@ const HomeWrapper = () => {
     return (
   
       <div className={`w-full relative ${loading ? "h-[100vh] -top-14 overflow-hidden" : ""}`}>
-        {/* {loading && <LoadingScreen />} */}
-        {/* {!loading && ( */}
+      
         <>
           {loading && <div className='absolute  h-[100vh] w-full z-30 '>
             <LoadingScreen />
