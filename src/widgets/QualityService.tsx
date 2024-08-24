@@ -74,7 +74,7 @@ export default function QualityServices() {
                                                 ? "-rotate-45"
                                                 : prevIndex === index
                                                 ? "-rotate-45"
-                                                : "rotate-0"
+                                                : "rotate-45 text-primary"
                                         }`}
                                     />
                                 </div>

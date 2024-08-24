@@ -7,31 +7,32 @@ interface ExperienceEducationItem {
 }
 
 const experience :ExperienceEducationItem[] = [
+  {
+    yearRange: '2023 – Present',
+    title: 'Generative AI & Metaverse',
+    subtitle: 'Learning Generative AI & Metaverse At Governor-House Karachi',
+  },
     {
-      yearRange: '2022 – Present',
-      title: 'Lead Developer',
-      subtitle: 'Blockdots, London',
+      yearRange: '2022 – 2023',
+      title: 'MERN Stack Development',
+      subtitle: 'Mern Stack Course At SMIT (Saylani Mass IT Training)',
     },
     {
-      yearRange: '2021 – 2022',
-      title: 'Full Stack Web Developer',
-      subtitle: 'Parsons, The New School',
+      yearRange: '2022 - 2024',
+      title: 'Intermediate',
+      subtitle: 'Intermediate in Engineering',
     },
     {
-      yearRange: '2020 – 2021',
-      title: 'UI Designer',
-      subtitle: 'House of Life, Leeds',
+      yearRange: '2020 – 2022',
+      title: 'Matriculation',
+      subtitle: 'Computer Science',
     },
-    {
-      yearRange: '2018 – 2020',
-      title: 'Junior Graphics Designer',
-      subtitle: 'Theme Junction, Bursa',
-    },
+    
   ];
 
   const education :ExperienceEducationItem[] = [
     {
-      yearRange: '2020 – 2023',
+      yearRange: '2020 – 2022',
       title: 'Programming Course',
       subtitle: 'Harvard University',
     },
@@ -55,17 +56,21 @@ const experience :ExperienceEducationItem[] = [
 const EducationSection = () => {
   return (
     <div className="sm:container py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Experience Section */}
+      <div className="grid grid-cols-1 ">
+        {/* Education Section */}
         <div>
           <h2 className="text-2xl font-bold text-purple-400 flex items-center">
-            <span className="mr-2">👨‍💻</span> My Experience
+            <span className="mr-2">👨‍💻</span> My Education
           </h2>
           <div className="mt-4 space-y-4">
             {experience.map((item, index) => (
               <div
               key={index}
-              className={`p-4 rounded-lg hover:bg-gradient-to-r transition-transform duration-1000 ease-in-out from-primary to-[#1e064b]`}
+              className={`p-4 rounded-lg bg-[#5e34b191] 
+                transition-all duration-1000 ease-in-out
+                hover:bg-gradient-to-r hover:from-primary hover:to-[#1e064b]
+                hover:delay-700
+              `}
             >
               <p className="text-purple-300 font-semibold">{item.yearRange}</p>
               <h3 className="text-white text-xl font-bold">{item.title}</h3>
@@ -77,7 +82,7 @@ const EducationSection = () => {
         </div>
 
         {/* Education Section */}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-bold text-purple-400 flex items-center">
             <span className="mr-2">🎓</span> My Education
           </h2>
@@ -93,7 +98,7 @@ const EducationSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

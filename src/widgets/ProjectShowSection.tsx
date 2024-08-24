@@ -14,7 +14,7 @@ const data: DataItem[] = [
   {
     title: 'Deloitte',
     description: 'How Deloitte found freedom, flexibility, and rebrand success in the switch to Dstudio',
-    imageUrl: '/images/image-1.jpg',
+    imageUrl: 'https://iblossomlearn.org/',
     category: 'UX/UI',
   },
   {

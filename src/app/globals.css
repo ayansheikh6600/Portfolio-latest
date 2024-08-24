@@ -83,6 +83,33 @@ body{
   }
 }
 
+body {
+    /* Ensure the entire page uses the custom scrollbar */
+    overflow-y: scroll;
+  }
+  
+  /* For WebKit Browsers (Chrome, Safari) */
+  body::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #0f0715; /* Color of the track */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8750f7; 
+    color: #55339b;/* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+    
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #55339b; /* Color of the scrollbar thumb on hover */
+    cursor: pointer;
+}
+
+
 
 
 
