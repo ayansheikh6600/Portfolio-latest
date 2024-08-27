@@ -11,10 +11,10 @@ const HomeWrapper = () => {
 
     useEffect(() => {
 
-        document.body.style.overflow = 'hidden';
+        
         const timer = setTimeout(() => {
             setLoading(false);
-            document.body.style.overflow = 'auto';
+           
         }, 4000); // Adjust the timing as needed
 
         return () => clearTimeout(timer);
@@ -22,10 +22,10 @@ const HomeWrapper = () => {
 
     return (
 
-        <div className={`w-full relative ${loading ? "h-[100vh] -top-14 overflow-hidden" : ""}`}>
+        <div className={`w-full relative ${loading ? "h-[100vh] -top-14 " : ""}`}>
 
 
-            {loading && <div className='absolute  h-[100vh] w-full z-30 '>
+            {loading && <div className='fixed  h-[100vh] w-full z-30 '>
                 <LoadingScreen />
             </div>}
             <Hero />

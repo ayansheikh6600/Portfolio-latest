@@ -28,7 +28,7 @@ const LoadingScreen = () => {
       <motion.div
         animate={{
           x: 0,
-          y: -992,
+          y: -1992,
           scale: 1,
           rotate: 0,
           animationDelay: "4",
