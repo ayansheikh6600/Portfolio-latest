@@ -1,4 +1,6 @@
 "use client"
+import ClientsStories from '@/widgets/ClientStories';
+import ContactSection from '@/widgets/ContactSection';
 import EducationSection from '@/widgets/EducationSection';
 import Hero from '@/widgets/Hero';
 import LoadingScreen from '@/widgets/LoadingScreen';
@@ -30,8 +32,10 @@ const HomeWrapper = () => {
             </div>}
             <Hero />
             <QualityServices />
+            <ClientsStories/>
             <ProjectSection />
             <EducationSection />
+            <ContactSection/>
         </div>
     )
 }
