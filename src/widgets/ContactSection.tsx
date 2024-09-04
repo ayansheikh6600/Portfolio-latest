@@ -13,13 +13,13 @@ const ContactSection = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:flex-row justify-center items-center">
 
-                <div className="flex justify-center md:justify-normal items-center">
+                <div className="flex justify-center md:justify-normal items-center" data-aos="fade-right">
 
 
                 <ContactForm />
                 </div>
 
-                <div className="mt-8 lg:mt-0 lg:ml-16 flex justify-center">
+                <div className="mt-8 lg:mt-0 lg:ml-16 flex justify-center" data-aos="fade-left">
 
                     <div className="text-white space-y-8">
                         <div className="flex items-center space-x-4">
