@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-[#0E0A16]">
+    <div className="w-full bg-[#0E0A16] sticky">
       <div className="container flex justify-between items-center py-4 text-white mx-auto px-4">
         <div className="flex items-baseline gap-1">
           {/* Logo Placeholder */}

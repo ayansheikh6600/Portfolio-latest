@@ -64,8 +64,8 @@ const ClientsStories = () => {
   return (
     <div className="bg-black text-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-white to-[#ffffffe5] bg-clip-text text-transparent">{"My Client's Stories"}</h2>
-        <p className="mb-8">Empowering people in a new digital journey with my super services</p>
+        <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-4 bg-gradient-to-r from-primary via-white to-[#ffffffe5] bg-clip-text text-transparent">{"My Client's Stories"}</h2>
+        <p className="mb-8 text-sm sm:text-base">Empowering people in a new digital journey with my super services</p>
         <div className='grid grid-cols-1 md:grid-cols-3'>
           <div className='md:flex hidden'>
 

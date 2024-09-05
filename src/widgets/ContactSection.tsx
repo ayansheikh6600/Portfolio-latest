@@ -5,13 +5,13 @@ import { MdEmail } from "react-icons/md";
 
 const ContactSection = () => {
     return (
-        <div className="sm:container mx-auto py-[30px] ">
+        <div className="sm:container p-4 mx-auto py-[30px] ">
 
 
             <h2 className="text-center text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-[#ffffffe5] bg-clip-text text-transparent">
                 Contact Me
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:flex-row justify-center items-center">
+            <div className="flex flex-col-reverse gap-5 md:flex-row justify-between items-center">
 
                 <div className="flex justify-center md:justify-normal items-center" data-aos="fade-right">
 

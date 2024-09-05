@@ -25,11 +25,11 @@ export default function QualityServices() {
     };
 
     return (
-        <div className="bg-black py-10">
-            <div className="sm:container text-white p-8">
-                <div className="text-center mb-10">
-                    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-[#ffffffe5] bg-clip-text text-transparent">My Quality Services</h2>
-                    <p className="mb-8 w-[80%] mx-auto">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
+        <div className="bg-black py-10 p-4">
+            <div className="sm:container text-white sm:p-8">
+                <div className="text-start sm:text-center mb-10">
+                    <h2 className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-4 bg-gradient-to-r from-primary to-[#ffffffe5] bg-clip-text text-transparent">My Quality Services</h2>
+                    <p className="mb-8 text-sm sm:text-base sm:w-[80%] mx-auto">We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.</p>
                 </div>
                 <div className="space-y-6">
                     {services.map((service, index) => (
@@ -63,7 +63,7 @@ export default function QualityServices() {
                             }`}>
                                 <div className="flex items-center space-x-4">
                                     <span className="text-lg font-semibold">{`0${service.id}`}</span>
-                                    <h3 className="text-xl font-bold">{service.title}</h3>
+                                    <h3 className="text-base sm:text-xl font-bold">{service.title}</h3>
                                 </div>
                                 <div className="flex items-center justify-between space-x-4">
                                     <p className="hidden sm:block w-[80%]">{service.description}</p>

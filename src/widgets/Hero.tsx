@@ -7,20 +7,20 @@ const Hero = () => {
 
             <div className="sm:container p-4 ">
                 <div className="grid md:grid-cols-2 grid-cols-1 justify-center items-center py-16">
-                    <div className="flex flex-col justify-center gap-4 text-center md:text-left">
-                        <h3 className="text-xl md:text-3xl text-[#ffffffe5] font-bold">
+                    <div className="flex flex-col justify-center gap-2 sm:gap-4 text-center md:text-left">
+                        <h3 className="text-start  sm:text-xl md:text-3xl text-[#ffffffe5] font-bold">
                             I am Ayan Sheikh
                         </h3>
-                        <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary to-[#ffffffe5] bg-clip-text text-transparent">
+                        <h1 className="text-start  text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-[#ffffffe5] bg-clip-text text-transparent">
                             MERN Stack Developer + <br />
                             React Native Developer
                         </h1>
-                        <p className="text-sm md:text-lg text-[#ffffffe5]">
+                        <p className="text-start  text-sm md:text-lg text-[#ffffffe5]">
                             I break down complex user experience problems to create integrity-focused solutions that connect billions of people.
                         </p>
                     </div>
                     <div className="flex justify-center items-center mt-6 md:mt-0">
-                        <div className="w-[250px] h-[300px] sm:w-[300px] sm:h-[350px] rounded-3xl rotate-6 hover:rotate-0 transition-transform border-4 duration-700 ease-in-out border-[#55339b] hover:border-primary bg-white">
+                        <div className="w-[220px] h-[270px] sm:w-[250px] md:w-[300px] sm:h-[300px] md:h-[350px] rounded-3xl rotate-6 hover:rotate-0 transition-transform border-4 duration-700 ease-in-out border-[#55339b] hover:border-primary bg-white">
                         </div>
                     </div>
                 </div>

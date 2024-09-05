@@ -24,12 +24,13 @@ const HomeWrapper = () => {
 
     return (
 
-        <div className={`w-full relative ${loading ? "h-[100vh] -top-14 " : ""}`}>
+        <div className={`w-full relative ${loading ? "h-[100vh] -top-16 " : ""}`}>
 
 
             {loading && <div className='fixed  h-[100vh] w-full z-30 '>
                 <LoadingScreen />
             </div>}
+            
             <Hero />
             <QualityServices />
             <ClientsStories/>
