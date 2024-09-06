@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Hero = () => {
@@ -20,7 +21,9 @@ const Hero = () => {
                         </p>
                     </div>
                     <div className="flex justify-center items-center mt-6 md:mt-0">
-                        <div className="w-[220px] h-[270px] sm:w-[250px] md:w-[300px] sm:h-[300px] md:h-[350px] rounded-3xl rotate-6 hover:rotate-0 transition-transform border-4 duration-700 ease-in-out border-[#55339b] hover:border-primary bg-white">
+                        <div className="w-[220px] h-[270px] sm:w-[250px] md:w-[300px] sm:h-[300px] md:h-[350px]  rounded-3xl rotate-[5deg] hover:rotate-0 transition-transform border-4 duration-700 ease-in-out border-[#55339b] hover:border-primary custom-radial-gradient ">
+                        <Image alt='' src={"/ayan.png"} height={1200} width={1200} className='w-full h-[100%]  object-cover rounded-3xl'/>
+                        
                         </div>
                     </div>
                 </div>
