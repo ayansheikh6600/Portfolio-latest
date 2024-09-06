@@ -14,25 +14,25 @@ const data: DataItem[] = [
   {
     title: 'Deloitte',
     description: 'How Deloitte found freedom, flexibility, and rebrand success in the switch to Dstudio',
-    imageUrl: 'https://iblossomlearn.org/',
+    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'UX/UI',
   },
   {
     title: 'Grow Your Business',
     description: 'We don’t only design beautiful experiences, also make sure your business grow.',
-    imageUrl: '/images/image-2.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Branding',
   },
   {
     title: 'Sebastian Camargo',
     description: 'A brand, strong identity, and typography design.',
-    imageUrl: '/images/image-3.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Apps',
   },
   {
     title: 'Bigger, Bolder and Better',
     description: 'We’ve been Polished, specialized with the space & create to make remarkable over time.',
-    imageUrl: '/images/image-4.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     category: 'Branding',
   },
 ];
