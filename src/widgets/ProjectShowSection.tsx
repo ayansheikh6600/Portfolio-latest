@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '@/shared/ProjectCard';
+import axios from 'axios';
 
 interface DataItem {
   title: string;
@@ -10,49 +11,68 @@ interface DataItem {
   category: string;
 }
 
-const data: DataItem[] = [
-  {
-    title: 'Deloitte',
-    description: 'How Deloitte found freedom, flexibility, and rebrand success in the switch to Dstudio',
-    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'UX/UI',
-  },
-  {
-    title: 'Grow Your Business',
-    description: 'We don’t only design beautiful experiences, also make sure your business grow.',
-    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Branding',
-  },
-  {
-    title: 'Sebastian Camargo',
-    description: 'A brand, strong identity, and typography design.',
-    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Apps',
-  },
-  {
-    title: 'Bigger, Bolder and Better',
-    description: 'We’ve been Polished, specialized with the space & create to make remarkable over time.',
-    imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    category: 'Branding',
-  },
-];
+// const data: DataItem[] = [
+//   {
+//     title: 'Deloitte',
+//     description: 'How Deloitte found freedom, flexibility, and rebrand success in the switch to Dstudio',
+//     imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     category: 'UX/UI',
+//   },
+//   {
+//     title: 'Grow Your Business',
+//     description: 'We don’t only design beautiful experiences, also make sure your business grow.',
+//     imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     category: 'Branding',
+//   },
+//   {
+//     title: 'Sebastian Camargo',
+//     description: 'A brand, strong identity, and typography design.',
+//     imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     category: 'Apps',
+//   },
+//   {
+//     title: 'Bigger, Bolder and Better',
+//     description: 'We’ve been Polished, specialized with the space & create to make remarkable over time.',
+//     imageUrl: 'https://images.unsplash.com/photo-1725610588150-c4cd8b88affd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+//     category: 'Branding',
+//   },
+// ];
 
 const ProjectSection = () => {
+
+  const [data, setData]:any= useState([])
+
+  useEffect(()=>{
+
+(async()=>{
+
+const res = await axios.get("/api/add-project")
+
+console.log(res?.data?.data);
+
+setData(res?.data?.data)
+
+
+})()
+
+  },[])
+
+
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
 
-  const categories = ['All', 'UX/UI', 'Branding', 'Apps'];
+  const categories:any = ['All', 'Website', 'Branding', 'App'];
 
   const filteredData = selectedCategory === 'All'
     ? data
-    : data.filter(item => item.category === selectedCategory);
+    : data.filter((item:any)=> item.category === selectedCategory);
 
   return (
     <div className='sm:container py-[30px]'>
       <div className="text-center">
         <div className='flex justify-center items-center'>
           <div className="relative flex flex-wrap justify-center space-x-2 sm:space-x-4 mb-8 bg-black rounded-full w-fit">
-            {categories.map((category) => (
+            {categories.map((category:any) => (
               <div key={category} className="relative">
                 <button
                   onClick={() => setSelectedCategory(category)}
@@ -81,13 +101,16 @@ const ProjectSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:p-0 px-3 sm:gap-6">
-          {filteredData?.map((item, index) => (
+          {filteredData?.map((item:any, index:any) => (
             <ProjectCard
               key={index}
               title={item.title}
               description={item.description}
-              imageUrl={item.imageUrl}
+              imageUrl={item?.resource?.secure_url}
               category={item.category}
+              liveUrl={item.liveUrl}
+              repoUrl={item.repoUrl}
+
             />
           ))}
         </div>
