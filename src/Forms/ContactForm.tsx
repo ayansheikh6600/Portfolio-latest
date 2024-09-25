@@ -29,7 +29,14 @@ const ContactForm = () => {
   const handleSubmit = async (e:any) => {
     e.preventDefault();
 
+    if(!form.email || !form.firstName || !form.lastName || !form.message || !form.phone|| !form.service ){
+      alert("Please Fill required feilds")
+      return
+    }
+
     try {
+
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         
